@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 615px;
+        }
+
+        /* Form Styling */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Dropdown Styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .image-main-div  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        } 
+        .image-div {
+            width: 50%;
+        }
+        .image-div img{
+            width: 100%;
+            height: 400px;
+        }
+        .google-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4285F4;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Hover effect */
+    .google-button:hover {
+      background-color: #3367D6;
+    }
+
+    /* Active effect */
+    .google-button:active {
+      background-color: #2D5BB0;
+    }.google-btn{
+        background-color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#courses">Courses</a>
+                    <div class="dropdown-content">
+                        <a href="#neet">NEET</a>
+                        <a href="#jee">JEE</a>
+                        <a href="#upsc">UPSC</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to Our Online Learning Platform</h1>
+            <p>Expand your knowledge with our wide range of courses taught by industry experts.</p>
+            <iframe width="560" height="615px" id="youTubeVideo"  frameborder="0"
+                allowfullscreen></iframe>
+        </section>
+
+        <div class="image-main-div ">
+            <button class="google-btn"><a class="google-button" onclick="prev()"><< Prev  </a></button>
+            <button class="google-btn"><a class="google-button" onclick="next()">Next >></a></button>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a leading online learning platform dedicated to providing high-quality education and empowering
+                individuals worldwide.</p>
+        </section>
+
+        <div class="image-main-div">
+            <div class="image-div">
+                <img src="https://assets-global.website-files.com/6410ebf8e483b5bb2c86eb27/6410ebf8e483b53d6186fc53_ABM%20College%20Web%20developer%20main.jpg"
+                    alt="">
+            </div>
+        </div>
+
+        <div class="image-main-div ">
+            <button class="google-btn"><a class="google-button" href="https://www.google.com/">Click me</a></button>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For any inquiries, please fill out the form below:</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+       
+
+        <!-- Courses Section -->
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <ul>
+                <li>
+                    <h3>Web Development</h3>
+                    <p>Learn how to build websites and web applications from scratch.</p>
+                    <div style="display: flex;align-items: center;">
+                        <img style="width: 50px;"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png"
+                            alt="Web Development Course">
+                        <a style="margin-left:50px;" href="web_dev_brochure.pdf" target="_blank">Download Brochure</a>
+                    </div>
+                </li>
+                <li>
+                    <h3>Data Science</h3>
+                    <p>Discover the power of data analysis and machine learning.</p>
+                    <div style="display: flex;align-items: center;">
+                        <img style="width: 50px;" src="https://res.cloudinary.com/practicaldev/image/fetch/s--ErFNXqjP--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/x3akeir98t709d0rbxcy.png" alt="Data Science Course">
+                        <a style="margin-left:50px;" href="data_science_brochure.pdf" target="_blank">Download Brochure</a>
+                    </div>
+                </li>
+                <!-- Add more courses here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Online Learning Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const video = ['tgbNymZ7vqY' , '_YUzQa_1RCE' , 'uYPbbksJxIg' , 'J52UrwXYQjs']
+        let i = 0
+        document.getElementById('youTubeVideo').src = `https://www.youtube.com/embed/${video[i]}`
+        // Add any JavaScript code here if needed
+        function next () {
+            i ++
+            if(i >= video.length) {
+                i =0
+            }
+            document.getElementById('youTubeVideo').src = `https://www.youtube.com/embed/${video[i]}`
+        }
+        function prev () {
+            i --
+            if (i < 0) {
+                i = video.length - 1
+            }
+            document.getElementById('youTubeVideo').src = `https://www.youtube.com/embed/${video[i]}`
+        }
+    </script>
+</body>
+
+</html>
